@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Filter Color From Munu</title>
+	<style type="text/css">
+		.filterDivo
+		{
+			float: left;
+             background: #F56C00;
+             color: #fff;
+             width: 100px;
+             line-height: 100px;
+             text-align: center;
+             margin:2px;
+             border-radius: 10px;
+             
+		}
+		.filterDivr
+		{
+			float: left;
+             background: red;
+             color: #fff;
+             width: 100px;
+             line-height: 100px;
+             text-align: center;
+             margin:2px;
+             border-radius: 10px;
+		}
+		.filterDiv
+		{
+			 float: left;
+             background: yellow;
+             color: black;
+             width: 100px;
+             line-height: 100px;
+             text-align: center;
+             margin:2px;
+             border-radius: 10px;
+		}
+		.container
+		{
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           padding-top: 95px;
+		}
+
+		.row
+		{
+           width: 500px;
+		}
+
+         .drop
+         {
+              float: right;
+         }
+            select
+            {
+            	background-color: #fff;
+                border: 1px solid black;
+                padding: 10px;
+                font-size: 16px;
+               cursor: pointer;
+               outline: none;
+            }
+
+
+@media only screen and (max-width: 600px) {
+ 
+ .container
+ {
+ 	justify-content: center;
+ }
+ .row
+		{
+           width: 400px;
+		}
+
+}
+
+@media only screen and (max-width: 400px) {
+ 
+ .container
+ {
+ 	justify-content: center;
+ }
+ .row
+		{
+           width: 250px;
+		}
+
+}
+
+	</style>
+</head>
+<body>
+
+
+<form>
+	
+
+<!--Primary colour #F56C00-->
+
+
+
+
+
+<div class="container">
+	<div class="row">
+
+<div class="drop">
+	<select name="dropdown" id="zoneSelect" onclick="updateChar()">
+  <option value="demo">See All</option>
+  <option value="oran">Orange</option>
+  <option value="reda">Red</option>
+  <option value="yellaow">Yellow</option>
+</select>
+</div><br><br><br><br>
+
+	<div class="filterDivo #F56C00" id="oraa">Orange</div>
+	<div class="filterDivo #F56C00" id="orab">Orange</div>
+	<div class="filterDivo #F56C00" id="orac">Orange</div>
+	<div class="filterDivo #F56C00" id="orad">Orange</div>
+	<div class="filterDivr red" id="panela">Red</div>
+	<div class="filterDivr red" id="panelb">Red</div>
+	<div class="filterDivr red" id="panelc">Red</div>
+	<div class="filterDivr red" id="paneld">Red</div>
+	<div class="filterDiv yellow" id="yella">Yellow</div>
+	<div class="filterDiv yellow" id="yellb">Yellow</div>
+	<div class="filterDiv yellow" id="yellc">Yellow</div>
+	<div class="filterDiv yellow" id="yelld">Yellow</div>
+
+		
+	</div>
+</div>
+	
+
+</form>
+
+
+<script>
+
+function updateChar() {
+
+    var zone = document.getElementById("zoneSelect");
+
+    if (zone.value == "oran"){
+
+      
+  document.getElementById("oraa").style.display = "block";
+  document.getElementById("orab").style.display = "block";
+  document.getElementById("orac").style.display = "block";
+  document.getElementById("orad").style.display = "block";
+
+  document.getElementById("panela").style.display = "none";
+  document.getElementById("panelb").style.display = "none";
+  document.getElementById("panelc").style.display = "none";
+  document.getElementById("paneld").style.display = "none";
+
+  document.getElementById("yella").style.display = "none";
+  document.getElementById("yellb").style.display = "none";
+  document.getElementById("yellc").style.display = "none";
+  document.getElementById("yelld").style.display = "none";
+
+
+    }
+
+
+
+if (zone.value == "reda")
+{
+
+  document.getElementById("panela").style.display = "block";
+  document.getElementById("panelb").style.display = "block";
+  document.getElementById("panelc").style.display = "block";
+  document.getElementById("paneld").style.display = "block";
+  
+  document.getElementById("oraa").style.display = "none";
+  document.getElementById("orab").style.display = "none";
+  document.getElementById("orac").style.display = "none";
+  document.getElementById("orad").style.display = "none";
+
+  document.getElementById("yella").style.display = "none";
+  document.getElementById("yellb").style.display = "none";
+  document.getElementById("yellc").style.display = "none";
+  document.getElementById("yelld").style.display = "none";
+}
+
+
+if (zone.value == "yellaow")
+{
+document.getElementById("oraa").style.display = "none";
+  document.getElementById("orab").style.display = "none";
+  document.getElementById("orac").style.display = "none";
+  document.getElementById("orad").style.display = "none";
+
+  document.getElementById("panela").style.display = "none";
+  document.getElementById("panelb").style.display = "none";
+  document.getElementById("panelc").style.display = "none";
+  document.getElementById("paneld").style.display = "none";
+
+  document.getElementById("yella").style.display = "block";
+  document.getElementById("yellb").style.display = "block";
+  document.getElementById("yellc").style.display = "block";
+  document.getElementById("yelld").style.display = "block";
+        
+}
+
+if (zone.value == "demo") 
+{
+
+	document.getElementById("panela").style.display = "block";
+  document.getElementById("panelb").style.display = "block";
+  document.getElementById("panelc").style.display = "block";
+  document.getElementById("paneld").style.display = "block";
+
+  document.getElementById("yella").style.display = "block";
+  document.getElementById("yellb").style.display = "block";
+  document.getElementById("yellc").style.display = "block";
+  document.getElementById("yelld").style.display = "block";
+
+  document.getElementById("oraa").style.display = "block";
+  document.getElementById("orab").style.display = "block";
+  document.getElementById("orac").style.display = "block";
+  document.getElementById("orad").style.display = "block";
+
+}
+
+
+
+}
+
+
+
+</script>
+
+</body>
+</html>
